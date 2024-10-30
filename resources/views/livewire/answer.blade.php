@@ -24,13 +24,19 @@
     <body>
 
     <div class="container">
+        @if(Session::has('success'))
+            <div class="alert alert-success" role="alert">
+                {{Session::get('success')}}
+            </div>
+        @endif
         <div class="form-container">
             <h2 class="text-center">Enter Your Answers</h2>
-            <form>
+            <form action="{{route('answers.store')}}" method="post">
+                @csrf
                 <div class="form-group">
                     <label for="question">Select a Question</label>
                     {{--                    <input type="text" class="form-control" id="question" placeholder="Type your question here..." >--}}
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="question_id">
                         <option selected>Open this select menu</option>
                     @foreach($questions as $question)
                         <option value="{{$question->id}}">{{$question->name}}</option>
@@ -40,62 +46,66 @@
                 <!-- Loop for eight answers -->
                 <div class="row mb-2">
                     <div class="col">
-{{--                    <label for="answer1">Answer 1</label>--}}
-                    <input name="name" type="text" class="form-control" id="answer1" placeholder="Type answer 1..." >
+                    <input name="name[]" type="text" class="form-control" id="answer1" placeholder="Type answer 1..." >
                     </div>
                     <div class="col">
-{{--                    <label for="value1">Value 1</label>--}}
-                    <input type="text" class="form-control" id="value1" placeholder="Type value 1..." >
+                    <input name="value[]" type="text" class="form-control" id="value1" placeholder="Type value 1..." >
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col">
-{{--                    <label for="answer2">Answer 2</label>--}}
-                    <input type="text" class="form-control" id="answer2" placeholder="Type answer 2..." >
+                    <input name="name[]" type="text" class="form-control" id="answer2" placeholder="Type answer 2..." >
                     </div>
                     <div class="col">
-{{--                    <label for="value2">Value 2</label>--}}
-                    <input type="text" class="form-control" id="value2" placeholder="Type value 2..." >
+                    <input name="value[]" type="text" class="form-control" id="value2" placeholder="Type value 2..." >
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col">
-{{--                    <label for="answer3">Answer 3</label>--}}
-                    <input type="text" class="form-control" id="answer3" placeholder="Type answer 3..." >
+                    <input name="name[]" type="text" class="form-control" id="answer3" placeholder="Type answer 3..." >
                     </div>
                     <div class="col">
-{{--                    <label for="value3">Value 3</label>--}}
-                    <input type="text" class="form-control" id="value3" placeholder="Type value 3..." >
+                    <input name="value[]" type="text" class="form-control" id="value3" placeholder="Type value 3..." >
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col">
-{{--                    <label for="answer4">Answer 4</label>--}}
-                    <input type="text" class="form-control" id="answer4" placeholder="Type answer 4..." >
+                    <input name="name[]" type="text" class="form-control" id="answer4" placeholder="Type answer 4..." >
                     </div>
                     <div class="col">
-{{--                    <label for="value4">Value 4</label>--}}
-                    <input type="text" class="form-control" id="value4" placeholder="Type value 4..." >
+                    <input name="value[]" type="text" class="form-control" id="value4" placeholder="Type value 4..." >
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col">
-{{--                    <label for="answer5">Answer 5</label>--}}
-                    <input type="text" class="form-control" id="answer5" placeholder="Type answer 5..." >
+                    <input name="name[]" type="text" class="form-control" id="answer5" placeholder="Type answer 5..." >
                     </div>
                     <div class="col">
-{{--                    <label for="value5">Value 5</label>--}}
-                    <input type="text" class="form-control" id="value5" placeholder="Type value 5..." >
+                    <input name="value[]" type="text" class="form-control" id="value5" placeholder="Type value 5..." >
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-{{--                    <label for="answer6">Answer 6</label>--}}
-                    <input type="text" class="form-control" id="answer6" placeholder="Type answer 6..." >
+                    <input name="name[]" type="text" class="form-control" id="answer6" placeholder="Type answer 6..." >
                     </div>
                     <div class="col">
-{{--                    <label for="value6">Value 6</label>--}}
-                    <input type="text" class="form-control" id="value6" placeholder="Type value 6..." >
+                    <input name="value[]" type="text" class="form-control" id="value6" placeholder="Type value 6..." >
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                    <input name="name[]" type="text" class="form-control" id="answer7" placeholder="Type answer 7..." >
+                    </div>
+                    <div class="col">
+                    <input name="value[]" type="text" class="form-control" id="value7" placeholder="Type value 7..." >
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                    <input name="name[]" type="text" class="form-control" id="answer8" placeholder="Type answer 8..." >
+                    </div>
+                    <div class="col">
+                    <input name="value[]" type="text" class="form-control" id="value8" placeholder="Type value 8..." >
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Submit Answers</button>

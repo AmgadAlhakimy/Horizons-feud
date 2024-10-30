@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link href="{{URL::asset('css/bootstrap.min.css.map')}}" rel="stylesheet">
+        <link href="{{URL::asset('css/bootstrap.css')}}" rel="stylesheet">
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -20,6 +22,18 @@
         @endif
     </head>
     <body class="font-sans antialiased dark:bg-white dark:text-black/50">
-    @livewire('button')
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button">
+        <a class="btn" href="{{route('questions.create')}}">Add a question</a>
+        </button>
+        <button class="btn btn-primary" type="button">
+        <a class="btn" href="{{route('answers.create')}}">Add answers</a>
+        </button>
+        <button class="btn btn-primary" type="button">
+        <a class="btn" href="{{route('index.page')}}">Start the Game</a>
+        </button>
+    </div>
+
     </body>
 </html>

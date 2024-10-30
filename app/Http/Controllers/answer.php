@@ -22,8 +22,8 @@ class answer extends Controller
     {
         try {
             $questions = \App\Models\Question::all();
-            return view('livewire.answer',compact('questions'));
-        }catch (\Exception $e){
+            return view('livewire.answer', compact('questions'));
+        } catch (\Exception $e) {
             return redirect()->back()->with(['error' => $e->getMessage()]);
         }
     }
@@ -34,11 +34,17 @@ class answer extends Controller
     public function store(StoreAnswerRequest $request)
     {
         try {
+
+            $index=0;
+            foreach ($request->name as $answerText) {
             \App\Models\Answer::create([
-                'name' => $request->name,
-                'value' => $request->value,
+                'name' => $request->name[$index],
+                'value' => $request->value[$index],
                 'question_id' => $request->question_id,
             ]);
+                $index++;
+            }
+
             return redirect()->back()->with(['success' => __('succeeded')]);
 
         } catch (\Exception $e) {
