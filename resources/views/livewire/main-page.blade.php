@@ -1,12 +1,7 @@
 <div class="containers ">
     <label class="col-12 text-center mt-2 title" for="">New Horizons Feud</label>
- @if($question->name ==='')
-     <div>First you have to enter the Questions</div>
-    @else
     <div class="line col-12"></div>
-{{--    <a class="btn btn-primary btn-lg" href="{{route('questions.create')}}">Add a question</a>--}}
-    <button><label for="" class="label_4 h1">0</label></button>
-{{--    <a class="btn btn-primary btn-lg" href="{{route('answers.create')}}">Add answers</a>--}}
+    <button><label for="" class="label_4 h1">{{$score->current}}</label></button>
     <div class="col-12 text-center">
         <label for="" class=" main_label">
             {{$question->name}}
@@ -48,7 +43,6 @@
                             'answerValue'=> $answer->value,
                             'questionId'=> $answer->question_id,
                             ])
-{{--                            @livewire('flip-button')--}}
                         @endif
                     @endforeach
                 </div>
@@ -65,5 +59,4 @@
         <button class="footer_button">Wrong</button>
         <button class="footer_button_2">Award team 2</button>
     </div>
- @endif
 </div>

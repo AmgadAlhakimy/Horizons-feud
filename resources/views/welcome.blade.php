@@ -31,7 +31,7 @@
         <a class="btn" href="{{route('answers.create')}}">Add answers</a>
         </button>
         <button class="btn btn-primary" type="button">
-        <a class="btn" href="{{route('index.page')}}">Start the Game</a>
+        <a class="btn" href="{{route('index-page')}}">Start the Game</a>
         </button>
     </div>
 

@@ -2,12 +2,16 @@
 
 namespace App\Livewire;
 
+use App\Models\Score;
+use \App\Models\Question;
+use Livewire\Attributes\On;
 use Livewire\Component;
 
 class MainPage extends Component
 {
     public $index=1;
     public $flipped = true;
+    public $receivedValue=0;
 
     public function increment()
     {
@@ -20,7 +24,9 @@ class MainPage extends Component
     }
     public function render()
     {
-        $question = \App\Models\Question::with('answers')->findOrFail($this->index);
-        return view('livewire.main-page', compact('question'));
+        $question = Question::with('answers')->findOrFail($this->index);
+        $score = Score::findorFail(1);
+        return view('livewire.main-page',
+            compact('question', 'score'));
     }
 }

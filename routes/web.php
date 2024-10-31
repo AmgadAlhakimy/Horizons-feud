@@ -11,7 +11,7 @@ Route::get('/', function () {
 });
 Route::get('/index', function () {
     return view('index');
-})->name('index.page');
+})->name('index-page');
 
 Route::get('/question', Question::class);
 Route::get('/answer', Answer::class);

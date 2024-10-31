@@ -16,6 +16,6 @@
 <body>
 
 @livewire('main-page')
-
+hello world
 </body>
 </html>
