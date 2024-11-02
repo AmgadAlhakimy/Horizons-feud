@@ -35,10 +35,18 @@
             </button>
         </div>
         <div class="row text-center">
-            <button class="btn btn-info" type="button">
+            <button class="btn btn-info" type="button"  onclick="StartTheGame()">
                 <a class="btn" href="{{ route('index-page') }}">Start the Game</a>
             </button>
+            <audio id="start-audio" src="{{ asset('sounds/family-feud-returning-from-commercial.mp3') }}" preload="auto"></audio>
         </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        
+        
+        
+        
     </div>
+    </div>
+    <script src="{{URL::asset('js/main.js')}}"></script>
     </body>
 </html>

@@ -177,7 +177,15 @@ button {
     transform: scaleY(0); /* Flips the button vertically */
 }
 
+.normal-size {
+    width: 50px; /* Set the normal size */
+    transition: transform 0.1s; /* Smooth transition for scaling */
+}
 
+.enlarged {
+    transform: scale(10); /* Scale the image to 1.5 times its size */
+    transition: transform 0.1s; /* Smooth transition for scaling */
+}
 /* ________________________________ */
 .cards_img{
     position: absolute;
