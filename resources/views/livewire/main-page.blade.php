@@ -1,18 +1,18 @@
 <div class="containers ">
     <div class="row tilte_photo">
-        <img  class="COL cards_img_1" src="{{URL::asset('images/2.png')}}" alt="skills"/>        
+        <img  class="COL cards_img_1" src="{{URL::asset('images/2.png')}}" alt="skills"/>
         <label class="col text-center mt-2 title" for="">New Horizons Feud</label>
     </div>
     <div class="line col-12"></div>
     <br>
     <div class="col-12 text-center">
         <label for="" class=" main_label">
-                        {{$question->name}}
+            Question {{$question->id}}
         </label>
     </div>
     <div class="col-12 text-center">
-    <label for="" class="label_4 h1">{{$score->current}}</label>
-{{--            <div id="score-display" class="score-display">Current Score: 0</div>--}}
+        <label for="" id="score-display" class="label_4 h1">0</label>
+
     </div>
 
     <div class="container_2">
@@ -20,7 +20,7 @@
         <div class="card_contain me-2 ms-2 ">
             <div class="row points">
                 <div class="col">
-                  @livewire('award1')
+                    @livewire('award1')
                 </div>
                 <div class="col">
                     <?php $counter = 0 ?>
@@ -30,7 +30,7 @@
                             @livewire('flip-button',[
                             'answerName'=> $answer->name,
                             'answerValue'=> $answer->value,
-                            'questionId'=> $answer->question_id,
+                            'questionId'=> $counter,
                             key($answer->question_id)
                             ])
                         @endif
@@ -51,21 +51,25 @@
                             @livewire('flip-button',[
                             'answerName'=> $answer->name,
                             'answerValue'=> $answer->value,
-                            'questionId'=> $answer->question_id,
+                            'questionId'=> $counter,
                             key($answer->question_id)
                             ])
                         @endif
                     @endforeach
                 </div>
                 <div class="col">
-                   @livewire('award2')
+                    @livewire('award2')
                 </div>
             </div>
         </div>
     </div>
     <div class="line col-12 mt-3"></div>
-    <button class="footer_button" wire:click="increment">
+    <button class="footer_button" wire:click="increment" onclick="loadNextQuestion()">
         Next Q?
     </button>
+    <button id="wrong-answer-button" onclick="enlargeImage()">
+        <img id="wrong-answer-image" class="normal-size" src="{{ URL::asset('images/Wrong.svg') }}" alt="Wrong Answer"/>
+    </button>
+    <audio id="wrong-audio" src="{{ asset('sounds/the-family-feud-buzzer-sound-effect.mp3') }}" preload="auto"></audio>
 
 </div>

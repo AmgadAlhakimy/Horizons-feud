@@ -169,6 +169,7 @@ var app = {
         app.board.find('#awardTeam2').on('click', app.awardPoints)
     }
 }
+
 app.init()
 //http://www.qwizx.com/gssfx/usa/ff.htm
 

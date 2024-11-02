@@ -30,9 +30,11 @@
         <button class="btn btn-primary" type="button">
         <a class="btn" href="{{route('answers.create')}}">Add answers</a>
         </button>
-        <button class="btn btn-primary" type="button">
+        <button class="btn btn-primary" type="button"  onclick="StartTheGame()">
         <a class="btn" href="{{ route('index-page') }}">Start the Game</a>
         </button>
+        <audio id="start-audio" src="{{ asset('sounds/family-feud-returning-from-commercial.mp3') }}" preload="auto"></audio>
     </div>
+    <script src="{{URL::asset('js/main.js')}}"></script>
     </body>
 </html>
