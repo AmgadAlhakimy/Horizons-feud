@@ -7,15 +7,13 @@
 body {
      /*background-color: var(--body-color);*/
      /*background-color: white;*/
+     background-color: rgb(8, 9, 56);
 }
 *:focus {
     outline: none;
 }
 a {
     text-decoration: none;
-}
-*{
-    background-color: rgb(8, 9, 56);
 }
 .containers{
     margin-top: 20px;
@@ -31,7 +29,20 @@ a {
     font-size: 50px;
     text-transform: uppercase;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
-
+}
+.title_2{
+    /* color: white; */
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
+}
+.title_3{
+    color: rgb(24, 84, 153);
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
 }
 .main_label{
     margin-top: 30px;
@@ -49,10 +60,10 @@ a {
     justify-content: space-around;
 }
 .card_contain{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .cards {
-    min-width: 300px ;
+    min-width: 400px ;
     border: 1px solid black;
     display: flex;
     justify-content: space-between;
@@ -65,39 +76,38 @@ a {
 }
 .cards .label_1 {
     margin: 0 5px;
-    font-size: 30px;
+    text-align: center;
     color: aliceblue;
     font-weight: bolder;
     background: linear-gradient(rgb(143, 143, 247) , rgb(127, 127, 236) , rgb(102, 102, 241));
-    border: none;
-    /* text-shadow: 1px 1px 1px rgba(107, 107, 107, 0.5); */
     text-transform: uppercase;
+    font-size: 20px;
 }
 .cards .label_2 {
     margin: 5px;
     border: 1px solid black;
-    height: 70px;
+    height: 50px;
     border-radius: 5px;
     width: 50px;
     background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
 }
 .cards button{
     position: absolute;
-    width: 289px;
+    height: 50px;
+    width: 389px;
     font-size: 30px;
     background: linear-gradient(rgb(101, 101, 238) , rgb(56, 56, 240) , rgb(31, 31, 236));
     border: none;
 }
 .label_3{
-    background: linear-gradient(rgb(231, 172, 116) , rgb(233, 156, 84) , rgb(250, 148, 53) );
-    padding: 12px;
+    /* background: linear-gradient(rgb(231, 172, 116) , rgb(233, 156, 84) , rgb(250, 148, 53) );
+    padding: 3px; */
     color: aliceblue;
-    border: 1px solid gray;
-    border-radius: 50%;
+    /* border: 1px solid gray; */
+    border-radius: 10px;
 }
 .label_4{
     /* background: linear-gradient(rgb(231, 172, 116) , rgb(233, 156, 84) , rgb(250, 148, 53) ); */
@@ -123,6 +133,7 @@ a {
     background: linear-gradient(rgb(101, 101, 238) , rgb(56, 56, 240) , rgb(31, 31, 236));
     border: 1px solid aliceblue;
     border: none;
+    color: aliceblue;
 }
 .footer_button{
 }
@@ -185,6 +196,10 @@ button {
 .enlarged {
     transform: scale(10); /* Scale the image to 1.5 times its size */
     transition: transform 0.1s; /* Smooth transition for scaling */
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    background-color: #007bff;
 }
 /* ________________________________ */
 .cards_img{
@@ -209,4 +224,38 @@ button {
 .tilte_photo{
     display: flex;
     align-items: center;
+}
+/* ____________________ main_bage ________________________ */
+
+/* award */
+.award{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .wrong_btn{
+    border: none;
+    width: 5px;
+    background-color: red;
+    margin-top: ;
+} */
+
+
+
+.main_btn{
+    background: linear-gradient(rgb(101, 101, 238) , rgb(56, 56, 240) , rgb(31, 31, 236));
+    /* background-color: red; */
+    border-radius: 10px;
+}
+
+.main_btn button{
+    color: aliceblue;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+
+.img_d{
+    /* display: none; */
 }

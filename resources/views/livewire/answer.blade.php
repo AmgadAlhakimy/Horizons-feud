@@ -5,18 +5,20 @@
         <title>Answer Entry Form</title>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{URL::asset('css/bootstrap.min.css.map')}}" rel="stylesheet">
-        <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet"> 
         <link href="{{URL::asset('css/bootstrap.css')}}" rel="stylesheet">
+        <link href="{{URL::asset('css/main.css')}}" rel="stylesheet">
+
         <style>
             body {
-                background-color: #f8f9fa;
+                /* background-color: #f8f9fa; */
             }
 
             .form-container {
                 margin-top: 30px;
                 padding: 30px;
-                background-color: white;
-                border-radius: 8px;
+                background: linear-gradient(rgb(101, 101, 238) , rgb(56, 56, 240) , rgb(31, 31, 236));
+                border-radius: 10px;
                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
         </style>
@@ -30,13 +32,13 @@
             </div>
         @endif
         <div class="form-container">
-            <h2 class="text-center">Enter Your Answers</h2>
+            <h2 class="text-center title">Enter Your Answers</h2>
             <form action="{{route('answers.store')}}" method="post">
                 @csrf
                 <div class="form-group">
-                    <label for="question">Select a Question</label>
-                    {{--                    <input type="text" class="form-control" id="question" placeholder="Type your question here..." >--}}
-                    <select class="form-select" aria-label="Default select example" name="question_id">
+                    <label for="question" class="title_2 ">Select a Question</label>
+                    {{--                    <input type="text" class="form-control title_3" id="question" placeholder="Type your question here..." >--}}
+                    <select class="form-select title_3" aria-label="Default select example" name="question_id">
                         <option selected>Open this select menu</option>
                     @foreach($questions as $question)
                         <option value="{{$question->id}}">{{$question->name}}</option>
@@ -44,70 +46,72 @@
                     </select>
                 </div>
                 <!-- Loop for eight answers -->
+            <div class="ms-2 me-2 mt-3 mb-2 ">
                 <div class="row mb-2">
                     <div class="col">
-                    <input name="name[]" type="text" class="form-control" id="answer1" placeholder="Type answer 1..." >
+                    <input name="name[]" type="text" class="form-control title_3" id="answer1" placeholder="Type answer 1..." >
                     </div>
                     <div class="col">
-                    <input name="value[]" type="text" class="form-control" id="value1" placeholder="Type value 1..." >
+                    <input name="value[]" type="text" class="form-control title_3" id="value1" placeholder="Type value 1..." >
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col">
-                    <input name="name[]" type="text" class="form-control" id="answer2" placeholder="Type answer 2..." >
+                    <input name="name[]" type="text" class="form-control title_3" id="answer2" placeholder="Type answer 2..." >
                     </div>
                     <div class="col">
-                    <input name="value[]" type="text" class="form-control" id="value2" placeholder="Type value 2..." >
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col">
-                    <input name="name[]" type="text" class="form-control" id="answer3" placeholder="Type answer 3..." >
-                    </div>
-                    <div class="col">
-                    <input name="value[]" type="text" class="form-control" id="value3" placeholder="Type value 3..." >
+                    <input name="value[]" type="text" class="form-control title_3" id="value2" placeholder="Type value 2..." >
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col">
-                    <input name="name[]" type="text" class="form-control" id="answer4" placeholder="Type answer 4..." >
+                    <input name="name[]" type="text" class="form-control title_3" id="answer3" placeholder="Type answer 3..." >
                     </div>
                     <div class="col">
-                    <input name="value[]" type="text" class="form-control" id="value4" placeholder="Type value 4..." >
+                    <input name="value[]" type="text" class="form-control title_3" id="value3" placeholder="Type value 3..." >
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col">
-                    <input name="name[]" type="text" class="form-control" id="answer5" placeholder="Type answer 5..." >
+                    <input name="name[]" type="text" class="form-control title_3" id="answer4" placeholder="Type answer 4..." >
                     </div>
                     <div class="col">
-                    <input name="value[]" type="text" class="form-control" id="value5" placeholder="Type value 5..." >
+                    <input name="value[]" type="text" class="form-control title_3" id="value4" placeholder="Type value 4..." >
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col">
+                    <input name="name[]" type="text" class="form-control title_3" id="answer5" placeholder="Type answer 5..." >
+                    </div>
+                    <div class="col">
+                    <input name="value[]" type="text" class="form-control title_3" id="value5" placeholder="Type value 5..." >
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                    <input name="name[]" type="text" class="form-control" id="answer6" placeholder="Type answer 6..." >
+                    <input name="name[]" type="text" class="form-control title_3" id="answer6" placeholder="Type answer 6..." >
                     </div>
                     <div class="col">
-                    <input name="value[]" type="text" class="form-control" id="value6" placeholder="Type value 6..." >
+                    <input name="value[]" type="text" class="form-control title_3" id="value6" placeholder="Type value 6..." >
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                    <input name="name[]" type="text" class="form-control" id="answer7" placeholder="Type answer 7..." >
+                    <input name="name[]" type="text" class="form-control title_3" id="answer7" placeholder="Type answer 7..." >
                     </div>
                     <div class="col">
-                    <input name="value[]" type="text" class="form-control" id="value7" placeholder="Type value 7..." >
+                    <input name="value[]" type="text" class="form-control title_3" id="value7" placeholder="Type value 7..." >
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                    <input name="name[]" type="text" class="form-control" id="answer8" placeholder="Type answer 8..." >
+                    <input name="name[]" type="text" class="form-control title_3" id="answer8" placeholder="Type answer 8..." >
                     </div>
                     <div class="col">
-                    <input name="value[]" type="text" class="form-control" id="value8" placeholder="Type value 8..." >
+                    <input name="value[]" type="text" class="form-control title_3" id="value8" placeholder="Type value 8..." >
                     </div>
                 </div>
+            </div>
                 <button type="submit" class="btn btn-primary btn-block">Submit Answers</button>
             </form>
         </div>

@@ -11,7 +11,7 @@
         </label>
     </div>
     <div class="col-12 text-center">
-        <label for="" id="score-display" class="label_4 h1">0</label>
+        <label for="" id="score-display" class="label_4 h1 mt-3">0</label>
 
     </div>
 
@@ -63,12 +63,12 @@
             </div>
         </div>
     </div>
-    <div class="line col-12 mt-3"></div>
-    <button class="footer_button" wire:click="increment" onclick="loadNextQuestion()">
+    <div class="line col-12 mt-3 mb-5"></div>
+    <button class="footer_button "  wire:click="increment" onclick="loadNextQuestion()">
         Next Q?
     </button>
-    <button id="wrong-answer-button" onclick="enlargeImage()">
-        <img id="wrong-answer-image" class="normal-size" src="{{ URL::asset('images/Wrong.svg') }}" alt="Wrong Answer"/>
+    <button id="wrong-answer-button" onclick="enlargeImage()"> 
+        <img id="wrong-answer-image" class="normal-size img_d" src="{{ URL::asset('images/Wrong.svg') }}" alt="Wrong Answer"/>
     </button>
     <audio id="wrong-audio" src="{{ asset('sounds/the-family-feud-buzzer-sound-effect.mp3') }}" preload="auto"></audio>
 

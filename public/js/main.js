@@ -1,15 +1,28 @@
-function enlargeImage() {
-    const img = document.getElementById('wrong-answer-image');
-    img.classList.add('enlarged'); // Add the enlarged class
 
-    const audio = document.getElementById('wrong-audio');
-    audio.currentTime = 0; // Rewind to the start
-    audio.play();
-    // Remove the class after 1 second to return to normal size
-    setTimeout(() => {
-        img.classList.remove('enlarged');
-    }, 1000); // 1000 milliseconds = 1 second
-}
+
+    // ----------------------------------------
+    function enlargeImage() {
+        const img = document.getElementById('wrong-answer-image');
+        img.classList.add('enlarged'); // إضافة الكلاس enlarged
+    
+        const audio = document.getElementById('wrong-audio');
+        audio.currentTime = 0; // إعادة التشغيل من البداية
+        audio.play();
+    
+        // إزالة الكلاس بعد 1 ثانية لإعادة الصورة إلى الحجم الطبيعي
+        setTimeout(() => {
+            img.classList.remove('enlarged');
+        }, 1000); // 1000 مللي ثانية = 1 ثانية
+    }
+    
+    document.addEventListener('keydown', (event) => {
+        if (event.key === ' ') {
+            enlargeImage();
+        }
+    });
+
+
+    // ---------------------------------------
 
 let currentScore = 0; // Initialize your score variable here
 

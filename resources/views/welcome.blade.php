@@ -6,6 +6,7 @@
 
         <link href="{{URL::asset('css/bootstrap.min.css.map')}}" rel="stylesheet">
         <link href="{{URL::asset('css/bootstrap.css')}}" rel="stylesheet">
+        <link href="{{URL::asset('css/main.css')}}" rel="stylesheet">
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -21,31 +22,33 @@
             </style>
         @endif
     </head>
-    <body class="font-sans antialiased dark:bg-white dark:text-black/50">
+    <body class="">
 
-    <div class="d-grid gap-2 me-5 ms-5  ">
-        <div class="row text-center">
-            <button class="btn btn-info" type="button">
-                <a class="btn" href="{{route('questions.create')}}">Add a question</a>
-            </button>
+    <div class="d-grid gap-2 me-5 ms-5 mt-5 main_btn_card">
+        <div class="row text-center  ">
+            <a class=" main_btn" href="{{route('questions.create')}}">
+                <button class="btn w-100 " type="button">
+                    Add a question
+                </button>        
+            </a>
         </div>
+
         <div class="row text-center">
-            <button class="btn btn-info" type="button">
-                <a class="btn" href="{{route('answers.create')}}">Add answers</a>
-            </button>
+            <a class="main_btn" href="{{route('answers.create')}}">
+                <button class="btn w-100" type="button">
+                    Add answers
+                </button>
+            </a>
         </div>
+
         <div class="row text-center">
-            <button class="btn btn-info" type="button"  onclick="StartTheGame()">
-                <a class="btn" href="{{ route('index-page') }}">Start the Game</a>
-            </button>
+            <a class="main_btn " href="{{ route('index-page') }}">
+                <button class="btn  w-100" type="button"  onclick="StartTheGame()">
+                    Start the Game
+                </button>
+            <a>
             <audio id="start-audio" src="{{ asset('sounds/family-feud-returning-from-commercial.mp3') }}" preload="auto"></audio>
         </div>
-    <div class="d-grid gap-2 col-6 mx-auto">
-        
-        
-        
-        
-    </div>
     </div>
     <script src="{{URL::asset('js/main.js')}}"></script>
     </body>

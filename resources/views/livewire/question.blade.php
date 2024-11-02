@@ -9,15 +9,17 @@
         <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{URL::asset('css/bootstrap.css')}}" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{URL::asset('css/main.css')}}" rel="stylesheet">
+
         <style>
             body {
-                background-color: #f8f9fa;
+                /* background-color: #f8f9fa; */
             }
 
             .form-container {
                 margin-top: 50px;
                 padding: 30px;
-                background-color: white;
+                background: linear-gradient(rgb(101, 101, 238) , rgb(56, 56, 240) , rgb(31, 31, 236));
                 border-radius: 8px;
                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
@@ -32,12 +34,11 @@
             </div>
         @endif
         <div class="form-container">
-            <h2 class="text-center">Enter Your Question</h2>
+            <h2 class="text-center title">Enter Your Question</h2>
             <form action="{{route('questions.store')}}" method="post">
                 @csrf
                 <div class="form-group mb-3">
-                    <label for="question">Question</label>
-                    <textarea class="form-control" id="question" rows="3" placeholder="Type your question here..."
+                    <textarea class="form-control text-center title_3" id="question" rows="3" placeholder="Type your question here..."
                          name="name"     ></textarea>
                     @error('name')
                     <small class="form-text text-danger">{{$message}}</small>
