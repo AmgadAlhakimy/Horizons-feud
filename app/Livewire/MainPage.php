@@ -12,13 +12,9 @@ class MainPage extends Component
     public $index = 1;
 
 
-    public function increment()
+    public function increment(): void
     {
         $this->qNum++;
-    }
-    public function increase()
-    {
-        $this->index++;
     }
 
     public function render()
