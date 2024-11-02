@@ -15,8 +15,9 @@ class FlipButton extends Component
     public function flip()
     {
         $this->flipped = !$this->flipped;
-      $this->storeScore();
+        $this->storeScore();
     }
+
     public function storeScore()
     {
         $score = Score::findorFail(1);

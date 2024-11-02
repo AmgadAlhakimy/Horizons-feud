@@ -14,8 +14,6 @@
     <title></title>
 </head>
 <body>
-
 @livewire('main-page')
-hello world
 </body>
 </html>

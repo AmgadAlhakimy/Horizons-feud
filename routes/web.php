@@ -1,6 +1,8 @@
 <?php
 
 use App\Livewire\Answer;
+use App\Livewire\FlipButton;
+use App\Livewire\MainPage;
 use App\Livewire\Question;
 use Illuminate\Support\Facades\Route;
 
@@ -13,8 +15,8 @@ Route::get('/index', function () {
 
 Route::get('/question', Question::class);
 Route::get('/answer', Answer::class);
-Route::get('/flip-button', \App\Livewire\FlipButton::class);
-Route::get('/main-page', \App\Livewire\MainPage::class)
+Route::get('/flip-button', FlipButton::class);
+Route::get('/main-page', MainPage::class)
     ->name('main-page');
 include 'resources.php';
 
