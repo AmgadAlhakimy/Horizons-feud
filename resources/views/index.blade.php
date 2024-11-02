@@ -16,6 +16,9 @@
 <body>
 
 @livewire('main-page')
-hello world
+
+<img  class=" cards_img" src="{{URL::asset('images/1.png')}}" alt="skills"/>
+{{-- <img  class=" cards_img_1" src="{{URL::asset('images/2.png')}}" alt="skills"/> --}}
+
 </body>
 </html>

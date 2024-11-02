@@ -176,3 +176,29 @@ button {
 .flipped {
     transform: scaleY(0); /* Flips the button vertically */
 }
+
+
+/* ________________________________ */
+.cards_img{
+    position: absolute;
+    border-radius: 10px;
+    border: 3px solid white;
+    width: 150px;
+    top: 30px;
+    margin: 0 20px;
+}
+.cards_img_1{
+    /* position: absolute; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* right: 50%; */
+    /* top: 50%; */
+    height: 60px;
+    width: 90px;
+}
+.tilte_photo{
+    display: flex;
+    align-items: center;
+}

@@ -1,5 +1,8 @@
 <div class="containers ">
-    <label class="col-12 text-center mt-2 title" for="">New Horizons Feud</label>
+    <div class="row tilte_photo">
+        <img  class="COL cards_img_1" src="{{URL::asset('images/2.png')}}" alt="skills"/>        
+        <label class="col text-center mt-2 title" for="">New Horizons Feud</label>
+    </div>
     <div class="line col-12"></div>
     <button><label for="" class="label_4 h1">{{$score->current}}</label></button>
     <div class="col-12 text-center">
