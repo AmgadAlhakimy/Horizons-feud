@@ -23,16 +23,22 @@
     </head>
     <body class="font-sans antialiased dark:bg-white dark:text-black/50">
 
-    <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-primary" type="button">
-        <a class="btn" href="{{route('questions.create')}}">Add a question</a>
-        </button>
-        <button class="btn btn-primary" type="button">
-        <a class="btn" href="{{route('answers.create')}}">Add answers</a>
-        </button>
-        <button class="btn btn-primary" type="button">
-        <a class="btn" href="{{ route('index-page') }}">Start the Game</a>
-        </button>
+    <div class="d-grid gap-2 me-5 ms-5  ">
+        <div class="row text-center">
+            <button class="btn btn-info" type="button">
+                <a class="btn" href="{{route('questions.create')}}">Add a question</a>
+            </button>
+        </div>
+        <div class="row text-center">
+            <button class="btn btn-info" type="button">
+                <a class="btn" href="{{route('answers.create')}}">Add answers</a>
+            </button>
+        </div>
+        <div class="row text-center">
+            <button class="btn btn-info" type="button">
+                <a class="btn" href="{{ route('index-page') }}">Start the Game</a>
+            </button>
+        </div>
     </div>
     </body>
 </html>
