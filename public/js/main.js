@@ -3,16 +3,15 @@
     // ----------------------------------------
     function enlargeImage() {
         const img = document.getElementById('wrong-answer-image');
-        img.classList.add('enlarged'); // إضافة الكلاس enlarged
+        img.classList.add('enlarged'); 
     
         const audio = document.getElementById('wrong-audio');
-        audio.currentTime = 0; // إعادة التشغيل من البداية
+        audio.currentTime = 0;
         audio.play();
     
-        // إزالة الكلاس بعد 1 ثانية لإعادة الصورة إلى الحجم الطبيعي
         setTimeout(() => {
             img.classList.remove('enlarged');
-        }, 1000); // 1000 مللي ثانية = 1 ثانية
+        }, 1000);
     }
     
     document.addEventListener('keydown', (event) => {
