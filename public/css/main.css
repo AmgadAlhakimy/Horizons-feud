@@ -26,7 +26,7 @@ a {
 .title{
     color: white;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 35px;
     text-transform: uppercase;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
 }
@@ -63,7 +63,7 @@ a {
     margin-top: 10px;
 }
 .cards {
-    min-width: 400px ;
+    min-width: 300px ;
     border: 1px solid black;
     display: flex;
     justify-content: space-between;
@@ -72,16 +72,18 @@ a {
     background: linear-gradient(rgb(143, 143, 247) , rgb(127, 127, 236) , rgb(102, 102, 241));
     margin-top: 5px;
     position: relative;
+    padding: 10px 0px;
 
 }
 .cards .label_1 {
     margin: 0 5px;
-    text-align: center;
+    font-size: 30px;
     color: aliceblue;
     font-weight: bolder;
     background: linear-gradient(rgb(143, 143, 247) , rgb(127, 127, 236) , rgb(102, 102, 241));
+    border: none;
+     text-shadow: 1px 1px 1px rgba(107, 107, 107, 0.5);
     text-transform: uppercase;
-    font-size: 20px;
 }
 .cards .label_2 {
     margin: 5px;
@@ -96,18 +98,17 @@ a {
 }
 .cards button{
     position: absolute;
-    height: 50px;
-    width: 389px;
+    width: 289px;
     font-size: 30px;
     background: linear-gradient(rgb(101, 101, 238) , rgb(56, 56, 240) , rgb(31, 31, 236));
     border: none;
 }
 .label_3{
-    /* background: linear-gradient(rgb(231, 172, 116) , rgb(233, 156, 84) , rgb(250, 148, 53) );
-    padding: 3px; */
+    background: linear-gradient(rgb(231, 172, 116) , rgb(233, 156, 84) , rgb(250, 148, 53) );
+    padding: 12px;
     color: aliceblue;
-    /* border: 1px solid gray; */
-    border-radius: 10px;
+    border: 1px solid gray;
+    border-radius: 50%;
 }
 .label_4{
     /* background: linear-gradient(rgb(231, 172, 116) , rgb(233, 156, 84) , rgb(250, 148, 53) ); */
@@ -132,7 +133,7 @@ a {
     font-size: 30px;
     background: linear-gradient(rgb(101, 101, 238) , rgb(56, 56, 240) , rgb(31, 31, 236));
     border: 1px solid aliceblue;
-    border: none;
+    /*border: none;*/
     color: aliceblue;
 }
 .footer_button{
@@ -221,11 +222,11 @@ button {
     height: 60px;
     width: 90px;
 }
-.tilte_photo{
+.title_photo{
     display: flex;
     align-items: center;
 }
-/* ____________________ main_bage ________________________ */
+/* ____________________ main_page ________________________ */
 
 /* award */
 .award{
@@ -258,4 +259,7 @@ button {
 
 .img_d{
     /* display: none; */
+}
+.questionNum{
+
 }
