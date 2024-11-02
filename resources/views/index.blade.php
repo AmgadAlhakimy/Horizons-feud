@@ -14,11 +14,13 @@
     <title></title>
 </head>
 <body>
-
 @livewire('main-page')
+<<<<<<< HEAD
 
 <img  class=" cards_img" src="{{URL::asset('images/1.png')}}" alt="skills"/>
 {{-- <img  class=" cards_img_1" src="{{URL::asset('images/2.png')}}" alt="skills"/> --}}
 
+=======
+>>>>>>> 85422b72e22ff32a8871cc060a071d737fdea00d
 </body>
 </html>
