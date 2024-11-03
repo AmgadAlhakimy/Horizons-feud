@@ -1,23 +1,20 @@
 <div class="containers ">
     <div class="row title_photo">
         <img  class="COL cards_img_1" src="{{URL::asset('images/2.png')}}" alt="skills"/>
-        <label class="col text-center mt-2 title" for="">New Horizons Feud</label>
-{{--        <div class="col-auto ms-auto text-end">--}}
-{{--            <label class="text-white">--}}
-{{--                Question {{$question->id}}--}}
-{{--            </label>--}}
-{{--        </div>--}}
+        <label class="col text-center  title" for="">New Horizons Feud</label>
     </div>
     <div class="line col-12"></div>
     <div class="col-12 text-center">
-        <label for="" id="score-display" class="label_4 h1 mt-3">0</label>
-            @livewire('award1')
+        <label for="" id="score-display" class="mt-1 title">CURRENT SCORE 0</label>
     </div>
 
     <div class="container_2">
         <!-- cars 1 -->
             <div class="card_contain me-2 ms-2 ">
                 <div class="row points">
+                    <div class="col">
+                        @livewire('award1')
+                    </div>
                 <div class="col">
                     <?php $counter = 0 ?>
                     @foreach($question->answers as $answer)
@@ -59,12 +56,18 @@
             </div>
         </div>
     </div>
-    <div class="line col-12 mt-3 mb-5"></div>
+    <div class="line col-12 mt-2 mb-3"></div>
     <button class="footer_button "  wire:click="increment" onclick="loadNextQuestion()">
-        Next Q?
+        Next Q? {{$question->id}}
     </button>
-    <button id="wrong-answer-button" onclick="enlargeImage()" >
-        <img id="wrong-answer-image" class="normal-size img_d" src="{{ URL::asset('images/Wrong.svg') }}" alt="Wrong Answer"/>
-    </button>
-    <audio id="wrong-audio" src="{{ asset('sounds/the-family-feud-buzzer-sound-effect.mp3') }}" preload="auto"></audio>
+    <label id="wrong-answer-button" onclick="enlargeImage()" >
+        <img id="wrong-answer-image" class="normal-size1 img_d" src="{{ URL::asset('images/Wrong.svg') }}" alt="Wrong Answer"/>
+    </label>
+    <audio id="wrong-audio" src="{{ asset('sounds/x.mp3') }}" preload="auto"></audio>
+    <div class="image-container">
+        <img id="wrong-answer-image1" class="normal-size1" src="{{ URL::asset('images/Wrong.svg') }}" alt="Wrong Answer"/>
+        <img id="wrong-answer-image2" class="normal-size1" src="{{ URL::asset('images/Wrong.svg') }}" alt="Wrong Answer"/>
+        <img id="wrong-answer-image3" class="normal-size1" src="{{ URL::asset('images/Wrong.svg') }}" alt="Wrong Answer"/>
+    </div>
+
 </div>
