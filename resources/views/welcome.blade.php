@@ -29,7 +29,7 @@
             <a class=" main_btn" href="{{route('questions.create')}}">
                 <button class="btn w-100 " type="button">
                     Add a question
-                </button>        
+                </button>
             </a>
         </div>
 
@@ -46,8 +46,7 @@
                 <button class="btn  w-100" type="button"  onclick="StartTheGame()">
                     Start the Game
                 </button>
-            <a>
-            <audio id="start-audio" src="{{ asset('sounds/family-feud-returning-from-commercial.mp3') }}" preload="auto"></audio>
+            </a>
         </div>
     </div>
     <script src="{{URL::asset('js/main.js')}}"></script>

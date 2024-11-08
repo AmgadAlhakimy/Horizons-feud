@@ -5,23 +5,11 @@
         <title>Answer Entry Form</title>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{URL::asset('css/bootstrap.min.css.map')}}" rel="stylesheet">
-        <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet"> 
+        <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{URL::asset('css/bootstrap.css')}}" rel="stylesheet">
         <link href="{{URL::asset('css/main.css')}}" rel="stylesheet">
 
-        <style>
-            body {
-                /* background-color: #f8f9fa; */
-            }
 
-            .form-container {
-                margin-top: 30px;
-                padding: 30px;
-                background: linear-gradient(rgb(101, 101, 238) , rgb(56, 56, 240) , rgb(31, 31, 236));
-                border-radius: 10px;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            }
-        </style>
     </head>
     <body>
 
