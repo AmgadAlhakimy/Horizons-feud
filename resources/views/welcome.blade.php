@@ -42,7 +42,7 @@
         </div>
 
         <div class="row text-center">
-            <a class="main_btn " href="{{ route('index-page') }}">
+            <a class="main_btn" href="{{ route('index-page') }}">
                 <button class="btn  w-100" type="button"  onclick="StartTheGame()">
                     Start the Game
                 </button>

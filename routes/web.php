@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Answer;
+use App\Livewire\BellQuestion;
 use App\Livewire\FinalScore;
 use App\Livewire\FlipButton;
 use App\Livewire\MainPage;
@@ -24,5 +25,8 @@ Route::get('/survey', Survey::class)
     ->name('survey');
 Route::get('/final', FinalScore::class)
     ->name('final');
+Route::get('/bell', BellQuestion::class)
+    ->name('bell');
+
 include 'resources.php';
 

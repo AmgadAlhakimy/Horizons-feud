@@ -25,49 +25,49 @@ class Survey extends Component
     public function updatedAnswer1($value)
     {
         $this->indexes[0] = 1; // Change to 1 when typing in answer1
-        $this->pubValue[0] = trim($value);
+        $this->pubValue[0] = ltrim($value);
     }
 
     public function updatedAnswer2($value)
     {
         $this->indexes[1] = 1; // Change to 1 when typing in answer1
-        $this->pubValue[1] = trim($value);
+        $this->pubValue[1] = ltrim($value);
     }
 
     public function updatedAnswer3($value)
     {
         $this->indexes[2] = 1; // Change to 1 when typing in answer1
-        $this->pubValue[2] = trim($value);
+        $this->pubValue[2] = ltrim($value);
     }
 
     public function updatedAnswer4($value)
     {
         $this->indexes[3] = 1; // Change to 1 when typing in answer1
-        $this->pubValue[3] = trim($value);
+        $this->pubValue[3] = ltrim($value);
     }
 
     public function updatedAnswer5($value)
     {
         $this->indexes[4] = 1; // Change to 1 when typing in answer1
-        $this->pubValue[4] = trim($value);
+        $this->pubValue[4] = ltrim($value);
     }
 
     public function updatedAnswer6($value)
     {
         $this->indexes[5] = 1; // Change to 1 when typing in answer1
-        $this->pubValue[5] = trim($value);
+        $this->pubValue[5] = ltrim($value);
     }
 
     public function updatedAnswer7($value)
     {
         $this->indexes[6] = 1; // Change to 1 when typing in answer1
-        $this->pubValue[6] = trim($value);
+        $this->pubValue[6] = ltrim($value);
     }
 
     public function updatedAnswer8($value)
     {
         $this->indexes[7] = 1; // Change to 1 when typing in answer1
-        $this->pubValue[7] = trim($value);
+        $this->pubValue[7] = ltrim($value);
     }
 
     public function updateScore()

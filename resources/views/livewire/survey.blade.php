@@ -18,7 +18,6 @@
     </div>
     <div class="board-container">
         <div class="board">
-
                 <!-- 5 rows with input fields -->
             <div class="align-middle">
             <h2 class="title_2 text-center text-">Survey Says</h2>
@@ -108,8 +107,16 @@
     <audio id="survey-says-audio" src="{{ asset('sounds/survey-says.mp3') }}" preload="auto"></audio>
     <audio id="timer-start-audio" src="{{ asset('sounds/timer-start.mp3') }}" preload="auto"></audio>
     <audio id="time-is-up-audio" src="{{ asset('sounds/time-is-up.mp3') }}" preload="auto"></audio>
-    <audio id="wrong-audio" src="{{ asset('sounds/x.mp3') }}" preload="auto"></audio>
     <audio id="you-said-audio" src="{{ asset('sounds/you-said.mp3') }}" preload="auto"></audio>
+
+    <audio id="calm-down-audio" src="{{ asset('sounds/calm-down.mp3') }}" preload="auto"></audio>
+    <audio id="final-audio" src="{{ asset('sounds/final-audio.mp3') }}" preload="auto"></audio>
+    <audio id="dreamers-audio" src="{{ asset('sounds/dreamers.mp3') }}" preload="auto"></audio>
+    <audio id="French-audio" src="{{ asset('sounds/French.mp3') }}" preload="auto"></audio>
+    <audio id="wait-audio" src="{{ asset('sounds/wait.mp3') }}" preload="auto"></audio>
+    <audio id="danza-audio" src="{{ asset('sounds/danza.mp3') }}" preload="auto"></audio>
+    <audio id="wrong-audio" src="{{ asset('sounds/x.mp3') }}" preload="auto"></audio>
+
     <div class="image-container">
         <img id="wrong-answer-image1" class="normal-size1" src="{{ URL::asset('images/Wrong.svg') }}"
              alt="Wrong Answer"/>

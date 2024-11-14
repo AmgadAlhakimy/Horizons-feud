@@ -67,8 +67,11 @@ a {
     color: rgb(24, 84, 153);
     font-weight: bold;
     font-size: 18px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
+}
+input{
+    text-transform: capitalize;
 }
 
 .main_label {
@@ -115,13 +118,15 @@ a {
 }
 .cards .label_1 {
     margin: 0 5px;
-    font-size: 30px;
+    font-size: 25px;
     color: aliceblue;
     font-weight: bolder;
-    background: linear-gradient(rgb(143, 143, 247), rgb(127, 127, 236), rgb(102, 102, 241));
+    /*background: linear-gradient(rgb(143, 143, 247), rgb(127, 127, 236), rgb(102, 102, 241));*/
     border: none;
     text-shadow: 1px 1px 1px rgba(107, 107, 107, 0.5);
     text-transform: uppercase;
+    /*text-align-all: center;*/
+    align-content: center;
 }
 
 .cards .label_2 {
@@ -145,8 +150,8 @@ a {
 }
 
 .label_4 {
-    /* background: linear-gradient(rgb(231, 172, 116) , rgb(233, 156, 84) , rgb(250, 148, 53) ); */
-    background-color: aliceblue;
+     background: linear-gradient(rgb(231, 172, 116) , rgb(233, 156, 84) , rgb(250, 148, 53) );
+    /*background-color: #faf7f7;*/
     padding: 12px;
     color: rgb(8, 9, 56);
     border: 1px solid gray;
@@ -476,8 +481,8 @@ input {
     width: 700px;
 }
 .final-img {
-    width: 400px; /* Adjust the width as needed */
-    height: 200px;
+    width: 300px; /* Adjust the width as needed */
+    height: 240px;
     margin-bottom: 20px; /* Space below the image */
 }
 .won {

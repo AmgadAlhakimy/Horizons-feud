@@ -57,6 +57,12 @@
         </div>
     </div>
     <div class="line col-12 mt-2 mb-3"></div>
+{{--    <div class="m-5"></div>--}}
+    <a class="main_btn" href="{{ route('bell') }}">
+        <button id="bell-question" class="footer_button" hidden="">
+          Bell Q
+        </button>
+    </a>
     @if($qNum < 3 )
         <a class="main_btn">
             <button class="footer_button" wire:click="increment" onclick="loadNextQuestion()">
@@ -72,13 +78,13 @@
     @endif
     <div class="m-5"></div>
     <a class="main_btn" href="{{ route('survey') }}">
-        <button class="footer_button" wire:click="">
+        <button class="footer_button">
             Survey Says
         </button>
     </a>
     <div class="m-5"></div>
     <a class="main_btn" href="{{ route('final') }}">
-        <button class="footer_button" wire:click="">
+        <button class="footer_button">
             Final Score
         </button>
     </a>
@@ -87,6 +93,12 @@
         <img id="wrong-answer-image" class="normal-size1 img_d" src="{{ URL::asset('images/Wrong.svg') }}"
              alt="Wrong Answer"/>
     </label>
+    <audio id="calm-down-audio" src="{{ asset('sounds/calm-down.mp3') }}" preload="auto"></audio>
+    <audio id="final-audio" src="{{ asset('sounds/final-audio.mp3') }}" preload="auto"></audio>
+    <audio id="dreamers-audio" src="{{ asset('sounds/dreamers.mp3') }}" preload="auto"></audio>
+    <audio id="French-audio" src="{{ asset('sounds/French.mp3') }}" preload="auto"></audio>
+    <audio id="wait-audio" src="{{ asset('sounds/wait.mp3') }}" preload="auto"></audio>
+    <audio id="danza-audio" src="{{ asset('sounds/danza.mp3') }}" preload="auto"></audio>
     <audio id="wrong-audio" src="{{ asset('sounds/x.mp3') }}" preload="auto"></audio>
     <div class="image-container">
         <img id="wrong-answer-image1" class="normal-size1" src="{{ URL::asset('images/Wrong.svg') }}"

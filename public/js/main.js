@@ -64,25 +64,89 @@ document.addEventListener('keydown', (event) => {
 });
 
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'T') {
-        startTimer();
+    if (event.key === 'M') {
+        document.getElementById('final-audio').play();
     }
 });
 
-function playTrueAudio() {
-    const audio = document.getElementById('survey-says-audio');
-    audio.currentTime = 0;
-    audio.play();
-}
 document.addEventListener('keydown', (event) => {
     if (event.key === 'N') {
         wrongAnswer();
     }
 });
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'T') {
+        startTimer();
+    }
+});
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'P') {
+        document.getElementById('bell-question').click();
+    }
+});
+
 document.addEventListener('keydown', (event) => {
     if (event.key === 'B') {
 // Go back to the previous page
         goBackOneStep();
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'n') {
+        document.getElementById('nextQ').click();
+    }
+});
+
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === '1') {
+        document.getElementById('dreamers-audio').play();
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === '2') {
+        document.getElementById('dreamers-audio').pause();
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === '3') {
+        document.getElementById('danza-audio').play();
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === '4') {
+        document.getElementById('danza-audio').pause();
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === '5') {
+        document.getElementById('calm-down-audio').play();
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === '6') {
+        document.getElementById('calm-down-audio').pause();
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === '7') {
+        document.getElementById('French-audio').play();
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === '8') {
+        document.getElementById('French-audio').pause();
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === '9') {
+        document.getElementById('wait-audio').play();
+    }
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === '0') {
+        document.getElementById('wait-audio').pause();
     }
 });
 
@@ -144,7 +208,7 @@ window.onload = function () {
     });
 };
 
-let timeLeft = 15; // Set countdown time in seconds
+let timeLeft = 25; // Set countdown time in seconds
 let timerInterval;
 
 function startTimer() {
@@ -152,13 +216,13 @@ function startTimer() {
     img.classList.add('timer-container');
     setTimeout(() => {
         img.classList.remove('timer-container');
-    }, 1000 * 17);
+    }, 1000 * 27);
     const img1 = document.getElementById('countdown');
     img1.classList.add('timer');
     setTimeout(() => {
         document.getElementById('countdown').innerText = '';
         img1.classList.remove('timer');
-    }, 1000 * 17);
+    }, 1000 * 27);
 
     timerInterval = setInterval(() => {
         if (timeLeft <= 0) {
@@ -167,7 +231,7 @@ function startTimer() {
             audio.play();
             clearInterval(timerInterval);
             document.getElementById('countdown').innerText = '0';
-            timeLeft = 15;
+            timeLeft = 25;
         } else {
             document.getElementById('countdown').innerText = timeLeft;
             timeLeft--;
@@ -189,9 +253,7 @@ function surveyAnswerAudio() {
 }
 
 function youSaidAudio() {// Clear the previous timeout
-   setTimeout(() => {
         document.getElementById('you-said-audio').play(); // Play audio after 3 seconds
-    }, -5000);
 }
 
 
@@ -210,7 +272,7 @@ function attachInputListeners() {
     });
 }
 function launchConfetti(x, y) {
-    const duration = 60 * 1000; // 2 seconds
+    const duration = 10000 * 1000; //
     const end = Date.now() + duration;
 
     const colors = ['#bb0000', '#ffffff', '#00bb00', '#0000bb'];

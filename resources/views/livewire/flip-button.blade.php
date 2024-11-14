@@ -1,5 +1,5 @@
 <div>
-    <div class="cards m-2">
+    <div class="cards m-2 text-center">
         <button
             wire:click="flip"
             class="flip-button {{ $flipped ? 'flipped' : '' }}"
